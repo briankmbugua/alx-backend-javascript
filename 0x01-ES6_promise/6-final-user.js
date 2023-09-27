@@ -12,7 +12,7 @@ function handleProfileSignup(firstName, lastName, fileName) {
             // Map the results to the required structure
             return results.map((result) => ({
                 status: result.status,
-                value: result.status === 'fulfilled' ? result.value : result.reason,
+                value: result.status === 'fulfilled' ? result.value : String(result.reason),
             }));
         });
 }
